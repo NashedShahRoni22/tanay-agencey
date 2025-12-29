@@ -134,7 +134,7 @@ export default function Testimonial() {
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={20}
-            slidesPerView={1.5}
+            slidesPerView={1}
             navigation={{
               nextEl: '.testimonial-button-next',
               prevEl: '.testimonial-button-prev',
@@ -149,11 +149,11 @@ export default function Testimonial() {
             }}
             breakpoints={{
               640: {
-                slidesPerView: 1.8,
+                slidesPerView: 1,
                 spaceBetween: 25,
               },
               1024: {
-                slidesPerView: 2.2,
+                slidesPerView: 2,
                 spaceBetween: 30,
               },
             }}
