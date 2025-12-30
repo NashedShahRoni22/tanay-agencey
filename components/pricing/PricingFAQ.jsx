@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { ArrowRight, ChevronDown, HelpCircle, Link } from "lucide-react";
 
 const PricingFAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -147,24 +147,6 @@ const PricingFAQ = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Contact CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-12 text-center p-8 bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl border border-primary/20"
-        >
-          <h3 className="text-xl font-bold text-gray-900 mb-2">
-            Still have questions?
-          </h3>
-          <p className="text-gray-600 mb-6">
-            Can't find the answer you're looking for? Our team is here to help.
-          </p>
-          <div className="flex justify-center">
-            <button className="btn-primary">Contact Support</button>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
