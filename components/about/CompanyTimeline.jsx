@@ -8,7 +8,7 @@ export default function CompanyTimeline() {
     {
       year: "2019",
       title: "The Beginning",
-      description: "Tanay Agency was founded with a vision to transform digital experiences. Started with a team of 3 passionate developers.",
+      description: "PHEBEH was founded with a vision to transform digital experiences. Started with a team of 3 passionate developers.",
       icon: Rocket,
       color: "from-blue-500 to-blue-600",
       stats: "3 Team Members"
@@ -166,7 +166,7 @@ export default function CompanyTimeline() {
                   <h3 className="text-2xl font-bold mb-3">{milestone.title}</h3>
                   <p className="text-white/70 leading-relaxed mb-4">{milestone.description}</p>
                   
-                  <div className={`inline-flex items-center gap-2 px-4 py-2 bg-primary/20 rounded-full text-sm font-semibold text-primary`}>
+                  <div className={`inline-flex items-center gap-2 px-4 py-2 bg-primary/20 rounded-full text-sm font-semibold text-white/90`}>
                     {milestone.stats}
                   </div>
                 </motion.div>
@@ -199,32 +199,6 @@ export default function CompanyTimeline() {
             ))}
           </div>
         </div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-20 text-center"
-        >
-          <div className="inline-flex flex-col items-center gap-4 p-8 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10">
-            <h3 className="text-2xl font-bold">
-              Be Part of Our Next Chapter
-            </h3>
-            <p className="text-white/70 max-w-xl">
-              We're just getting started. Join us as we continue to push boundaries and 
-              set new standards in digital innovation.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(100, 33, 255, 0.4)" }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-full font-semibold transition-all duration-300 mt-2"
-            >
-              Let's Work Together
-            </motion.button>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

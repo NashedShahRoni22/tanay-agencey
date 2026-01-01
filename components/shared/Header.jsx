@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import blackLogo from "@/public/phebeh-black.png";
 import {
   Menu,
   X,
@@ -16,6 +17,7 @@ import {
   Dribbble,
   Youtube,
 } from "lucide-react";
+import Image from "next/image";
 
 // --- DATA ARRAYS ---
 const MENU_ITEMS = [
@@ -131,26 +133,26 @@ export default function Header() {
           <div className="flex justify-between items-center h-14 text-sm font-medium">
             <div className="flex items-center gap-6">
               <motion.a
-                href="tel:+25632542598"
+                href="tel:+61415340554"
                 className="flex items-center gap-2 hover:text-white/80 transition-colors cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Phone size={18} />
-                <span>(+256) 3254 2598</span>
+                <span>+61415340554</span>
               </motion.a>
               <div className="flex items-center gap-2">
                 <MapPin size={18} />
-                <span>128 Munich, Germany</span>
+                <span>30 South Terrace, Australia</span>
               </div>
               <motion.a
-                href="mailto:tanay@gmail.com"
+                href="mailto:phebeh@gmail.com"
                 className="hidden lg:flex items-center gap-2 hover:text-white/80 transition-colors cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Mail size={18} />
-                <span>tanay@gmail.com</span>
+                <span>phebeh@gmail.com</span>
               </motion.a>
             </div>
 
@@ -195,10 +197,12 @@ export default function Header() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl mr-2 group-hover:bg-[#501ACD] transition-colors">
-                  T
-                </div>
-                <span className="text-2xl font-bold text-[#061039]">Tanay</span>
+                <Image
+                  src={blackLogo}
+                  alt="phebeh Logo"
+                  width={140}
+                  height={40}
+                />
               </motion.div>
             </Link>
 
@@ -221,7 +225,11 @@ export default function Header() {
                   >
                     <motion.span
                       whileHover={{ y: -2 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      }}
                       className="inline-block"
                     >
                       {item.label}
@@ -241,12 +249,12 @@ export default function Header() {
             {/* CTA & Mobile Toggle */}
             <div className="flex items-center gap-4">
               <motion.a
-                href="tel:+25862323258"
+                href="tel:+61415340554"
                 className="hidden xl:inline-flex px-6 py-2.5 bg-primary hover:bg-[#501ACD] text-white rounded-full font-medium text-sm transition-colors shadow-lg shadow-purple-500/30 cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Call: +258 6232 3258
+                Call: +61415340554
               </motion.a>
 
               {/* Hamburger Button */}
@@ -336,8 +344,11 @@ export default function Header() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail size={16} className="text-primary" />
-                    <a href="mailto:tanay@gmail.com" className="cursor-pointer">
-                      tanay@gmail.com
+                    <a
+                      href="mailto:phebeh@gmail.com"
+                      className="cursor-pointer"
+                    >
+                      phebeh@gmail.com
                     </a>
                   </div>
                 </div>

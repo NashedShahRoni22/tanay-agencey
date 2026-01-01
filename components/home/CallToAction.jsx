@@ -37,7 +37,7 @@ const CallToAction = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "hello@tanayagency.com",
+      details: "hello@phebeh.com",
       subtext: "24-hour response time"
     },
     {

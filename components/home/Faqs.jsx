@@ -7,8 +7,8 @@ import { useState } from "react";
 const faqData = [
   {
     id: 1,
-    question: "What services does Tanay Agency offer?",
-    answer: "Tanay Agency specializes in comprehensive IT solutions including web development, mobile app development, cloud services, digital marketing, and IT consulting. We provide end-to-end solutions tailored to your business needs."
+    question: "What services does PHEBEH offer?",
+    answer: "PHEBEH specializes in comprehensive IT solutions including web development, mobile app development, cloud services, digital marketing, and IT consulting. We provide end-to-end solutions tailored to your business needs."
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const faqData = [
   },
   {
     id: 6,
-    question: "What makes Tanay Agency different from other IT companies?",
+    question: "What makes PHEBEH different from other IT companies?",
     answer: "We combine technical expertise with deep industry knowledge, personalized service, and a commitment to delivering measurable results. Our team stays current with the latest technologies while maintaining a focus on your business objectives."
   }
 ];

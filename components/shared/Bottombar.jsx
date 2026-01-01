@@ -12,8 +12,10 @@ import {
   Phone,
   MapPin,
   Send,
-  CopyrightIcon
+  CopyrightIcon,
 } from "lucide-react";
+import whiteLogo from "@/public/phebeh.png";
+import Image from "next/image";
 
 const Bottombar = () => {
   const containerVars = {
@@ -44,7 +46,7 @@ const Bottombar = () => {
     "Data Protection",
     "App Development",
     "Machine Learning",
-    "Helpdesk Services"
+    "Helpdesk Services",
   ];
 
   const company = [
@@ -52,7 +54,7 @@ const Bottombar = () => {
     { name: "Portfolio", href: "/portfolio" },
     { name: "Pricing", href: "/pricing" },
     { name: "Team", href: "/team" },
-    { name: "Contact", href: "/contact" }
+    { name: "Contact", href: "/contact" },
   ];
 
   const socialLinks = [
@@ -60,11 +62,11 @@ const Bottombar = () => {
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Instagram, href: "#", label: "Instagram" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Youtube, href: "#", label: "YouTube" }
+    { icon: Youtube, href: "#", label: "YouTube" },
   ];
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -73,30 +75,30 @@ const Bottombar = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDM0djItMnpNMzQgMzZoLTJ2LTJoMnYyem0wLTJoMnYyaC0ydi0yem0wIDBoLTJ2Mmgydi0yem0wIDBoMnYtMmgtMnYyem0wLTJoLTJ2Mmgydi0yem0wIDBoMnYtMmgtMnYyem0yLTJoLTJ2Mmgydi0yem0wIDBoMnYtMmgtMnYyem0wLTJoLTJ2Mmgydi0yem0wIDBoMnYtMmgtMnYyem0wLTJoLTJ2Mmgydi0yem0wIDBoMnYtMmgtMnYyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
-        
+
         {/* Glowing orbs */}
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.1, 0.2, 0.1]
+            opacity: [0.1, 0.2, 0.1],
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
           className="absolute -top-40 -left-40 w-96 h-96 bg-primary rounded-full blur-3xl"
         />
         <motion.div
           animate={{
             scale: [1, 1.3, 1],
-            opacity: [0.08, 0.15, 0.08]
+            opacity: [0.08, 0.15, 0.08],
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 2
+            delay: 2,
           }}
           className="absolute -bottom-40 -right-40 w-96 h-96 bg-primary rounded-full blur-3xl"
         />
@@ -119,14 +121,17 @@ const Bottombar = () => {
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center gap-2 mb-6"
               >
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                  T
-                </div>
-                <span className="text-2xl font-bold text-white">Tanay</span>
+                <Image
+                  src={whiteLogo}
+                  alt="phebeh Logo"
+                  width={180}
+                  height={60}
+                />
               </motion.div>
-              
+
               <p className="text-gray-300 leading-relaxed mb-6 text-sm">
-                We are passionate about empowering businesses through innovative and reliable technology solutions.
+                We are passionate about empowering businesses through innovative
+                and reliable technology solutions.
               </p>
 
               {/* Social Links */}
@@ -225,20 +230,26 @@ const Bottombar = () => {
               <li className="flex items-start gap-3 group">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div className="text-sm text-gray-300">
-                  <p>1234 Elm Street, Suite 500</p>
-                  <p>San Francisco, CA 94107</p>
+                  <p>30 South Terrace, Punchbowl-2196,</p>
+                  <p>NSW, Australia 🇦🇺</p>
                 </div>
               </li>
               <li className="flex items-center gap-3 group">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <a href="tel:+15551234567" className="text-sm text-gray-300 hover:text-primary transition-colors">
-                  Call Us: +1 (555) 123-4567
+                <a
+                  href="tel:+61415340554"
+                  className="text-sm text-gray-300 hover:text-primary transition-colors"
+                >
+                  Call Us: +61415340554
                 </a>
               </li>
               <li className="flex items-center gap-3 group">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <a href="mailto:tanay@gmail.com" className="text-sm text-gray-300 hover:text-primary transition-colors">
-                  Mail: tanay@gmail.com
+                <a
+                  href="mailto:phebeh@gmail.com"
+                  className="text-sm text-gray-300 hover:text-primary transition-colors"
+                >
+                  Mail: phebeh@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm text-gray-300">
@@ -261,7 +272,11 @@ const Bottombar = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-gray-400 text-sm flex items-center gap-1"
             >
-              Copyright <CopyrightIcon/> {new Date().getFullYear()} <span className="text-primary hover:text-white transition-colors cursor-pointer">Tanay</span>. All Rights Reserved.
+              Copyright <CopyrightIcon /> {new Date().getFullYear()}{" "}
+              <span className="text-primary hover:text-white transition-colors cursor-pointer">
+                phebeh
+              </span>
+              . All Rights Reserved.
             </motion.div>
 
             <motion.div
@@ -302,9 +317,9 @@ const Bottombar = () => {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 1 }}
-        whileHover={{ 
+        whileHover={{
           scale: 1.15,
-          boxShadow: "0 10px 30px rgba(100, 33, 255, 0.4)"
+          boxShadow: "0 10px 30px rgba(100, 33, 255, 0.4)",
         }}
         whileTap={{ scale: 0.9 }}
         onClick={scrollToTop}

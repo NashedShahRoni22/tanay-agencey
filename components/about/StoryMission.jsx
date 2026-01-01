@@ -120,7 +120,7 @@ export default function StoryMission() {
                 viewport={{ once: true }}
                 className="text-lg text-gray-600 leading-relaxed mb-4"
               >
-                Founded with a vision to transform how businesses leverage technology, Tanay Agency 
+                Founded with a vision to transform how businesses leverage technology, PHEBEH 
                 has grown from a small startup to a trusted partner for companies worldwide. Our journey 
                 began with a simple mission: deliver innovative solutions that make a real difference.
               </motion.p>

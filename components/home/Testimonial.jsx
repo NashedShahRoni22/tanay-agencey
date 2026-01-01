@@ -19,7 +19,7 @@ export default function Testimonial() {
       company: "TechStart Inc.",
       avatar: "https://i.pravatar.cc/150?img=1",
       rating: 5,
-      review: "Tanay Agency transformed our digital presence completely. Their expertise in modern web technologies and attention to detail exceeded our expectations. The team's communication was excellent throughout the project.",
+      review: "PHEBEH transformed our digital presence completely. Their expertise in modern web technologies and attention to detail exceeded our expectations. The team's communication was excellent throughout the project.",
       project: "E-commerce Platform"
     },
     {
@@ -29,7 +29,7 @@ export default function Testimonial() {
       company: "InnovateLab",
       avatar: "https://i.pravatar.cc/150?img=2",
       rating: 5,
-      review: "Working with Tanay Agency was a game-changer for our startup. They delivered a robust mobile application that our users love. Their agile approach and technical expertise helped us launch ahead of schedule.",
+      review: "Working with PHEBEH was a game-changer for our startup. They delivered a robust mobile application that our users love. Their agile approach and technical expertise helped us launch ahead of schedule.",
       project: "Mobile App Development"
     },
     {
@@ -39,7 +39,7 @@ export default function Testimonial() {
       company: "GrowthCorp",
       avatar: "https://i.pravatar.cc/150?img=3",
       rating: 5,
-      review: "The cloud infrastructure solution provided by Tanay Agency has significantly improved our operational efficiency. Their 24/7 support and proactive monitoring give us complete peace of mind.",
+      review: "The cloud infrastructure solution provided by PHEBEH has significantly improved our operational efficiency. Their 24/7 support and proactive monitoring give us complete peace of mind.",
       project: "Cloud Migration"
     },
     {
@@ -49,7 +49,7 @@ export default function Testimonial() {
       company: "DataFlow Systems",
       avatar: "https://i.pravatar.cc/150?img=4",
       rating: 5,
-      review: "Tanay Agency's cybersecurity expertise helped us strengthen our defenses against modern threats. Their comprehensive security audit and implementation were exactly what we needed to protect our business.",
+      review: "PHEBEH's cybersecurity expertise helped us strengthen our defenses against modern threats. Their comprehensive security audit and implementation were exactly what we needed to protect our business.",
       project: "Security Audit & Implementation"
     },
     {
@@ -59,7 +59,7 @@ export default function Testimonial() {
       company: "StreamLine Solutions",
       avatar: "https://i.pravatar.cc/150?img=5",
       rating: 5,
-      review: "The database optimization service from Tanay Agency improved our application performance by 300%. Their technical knowledge and systematic approach to problem-solving is outstanding.",
+      review: "The database optimization service from PHEBEH improved our application performance by 300%. Their technical knowledge and systematic approach to problem-solving is outstanding.",
       project: "Database Optimization"
     },
     {
@@ -69,7 +69,7 @@ export default function Testimonial() {
       company: "NextGen Apps",
       avatar: "https://i.pravatar.cc/150?img=6",
       rating: 5,
-      review: "Tanay Agency delivered a cutting-edge web application that perfectly met our complex requirements. Their innovative solutions and commitment to quality are truly impressive.",
+      review: "PHEBEH delivered a cutting-edge web application that perfectly met our complex requirements. Their innovative solutions and commitment to quality are truly impressive.",
       project: "Web Application Development"
     }
   ];
@@ -125,7 +125,7 @@ export default function Testimonial() {
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Don't just take our word for it. Here's what our satisfied clients have to say
-            about working with Tanay Agency and the results we've delivered.
+            about working with PHEBEH and the results we've delivered.
           </p>
         </motion.div>
 
