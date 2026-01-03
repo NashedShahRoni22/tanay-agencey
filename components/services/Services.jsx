@@ -54,38 +54,38 @@ export default function Services() {
     {
       icon: Smartphone,
       title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications that deliver exceptional user experiences and seamless functionality on all devices."
+      description: "Custom Android and iOS applications designed for performance, usability, and scalability."
     },
     {
       icon: Cloud,
       title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services to optimize performance, enhance security, and reduce operational costs."
+      description: "Secure and scalable cloud setups to help your business store, manage, and access data efficiently."
     },
     {
       icon: Shield,
       title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets, ensure data integrity, and maintain regulatory compliance."
+      description: "Technology and practices designed to safeguard systems, data, and user access across digital environments."
     },
     {
       icon: Database,
       title: "Database Management",
-      description: "Expert database design, optimization, and maintenance services for reliable data storage, retrieval, and performance monitoring."
+      description: "Structured database design, optimisation, and maintenance to ensure data integrity and system reliability."
     },
-    {
-      icon: Globe,
-      title: "Web Development",
-      description: "Modern, responsive websites and web applications built with cutting-edge technologies, SEO optimization, and best practices."
-    },
+    // {
+    //   icon: Globe,
+    //   title: "Web Development",
+    //   description: "Modern, responsive websites and web applications built with cutting-edge technologies, SEO optimization, and best practices."
+    // },
     {
       icon: Cpu,
-      title: "IT Infrastructure",
-      description: "Complete IT infrastructure setup, maintenance, and support services for seamless business operations and system reliability."
+      title: "IT Support & Maintenance",
+      description: "Reliable technical support to keep your systems updated, secure, and running smoothly."
     },
-    {
-      icon: Headphones,
-      title: "24/7 Technical Support",
-      description: "Round-the-clock technical assistance and monitoring services to ensure your systems run smoothly and efficiently at all times."
-    }
+    // {
+    //   icon: Headphones,
+    //   title: "24/7 Technical Support",
+    //   description: "Round-the-clock technical assistance and monitoring services to ensure your systems run smoothly and efficiently at all times."
+    // }
   ];
 
   return (

@@ -1,7 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ArrowRight,
+  CheckCircle2,
+  Sparkles,
+} from "lucide-react";
+import Link from "next/link";
 
 const CallToAction = () => {
   const containerVars = {
@@ -31,34 +40,33 @@ const CallToAction = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "+1 (555) 123-4567",
-      subtext: "Mon-Fri 9AM-6PM EST"
+      details: "+61415340554",
     },
     {
       icon: Mail,
       title: "Email Us",
       details: "hello@phebeh.com",
-      subtext: "24-hour response time"
+      subtext: "24-hour response time",
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "123 Tech Street, Suite 100",
-      subtext: "San Francisco, CA 94105"
+      details: "30 South Terrace, Punchbowl-2196,",
+      subtext: "NSW, Australia 🇦🇺",
     },
     {
       icon: Clock,
       title: "Business Hours",
-      details: "Mon - Fri: 9AM - 6PM",
-      subtext: "Weekends by appointment"
-    }
+      details: "Mon - Fri: 8AM - 7PM",
+      subtext: "Weekends by appointment",
+    },
   ];
 
   const benefits = [
     "Free 30-minute consultation",
     "Custom tailored proposals",
     "Transparent pricing structure",
-    "Dedicated project support"
+    "Dedicated project support",
   ];
 
   return (
@@ -81,27 +89,34 @@ const CallToAction = () => {
           viewport={{ once: true }}
           className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <motion.div variants={itemVars} className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
+          <motion.div
+            variants={itemVars}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6"
+          >
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-semibold text-primary">Let's Work Together</span>
+            <span className="text-sm font-semibold text-primary">
+              Let's Work Together
+            </span>
           </motion.div>
-          
+
           <motion.h2
             variants={itemVars}
             className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight"
           >
-            Ready to Transform Your Business?
+            Start a Conversation
           </motion.h2>
-          
+
           <motion.p
             variants={itemVars}
             className="text-lg text-gray-600 leading-relaxed"
           >
-            Schedule a free consultation to discuss your project. We'll help you create something extraordinary that drives real results.
+            If you are planning a new digital initiative or reviewing existing
+            systems, we welcome the opportunity to discuss how <span className="text-primary">PHEBEH</span> can
+            support your objectives.
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Contact Information */}
           <motion.div
             variants={containerVars}
@@ -129,9 +144,15 @@ const CallToAction = () => {
                       <contact.icon className="w-5 h-5 text-primary group-hover:text-white transition-colors duration-300" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-gray-900 mb-1">{contact.title}</h4>
-                      <p className="text-gray-700 font-medium text-sm">{contact.details}</p>
-                      <p className="text-gray-500 text-xs mt-1">{contact.subtext}</p>
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        {contact.title}
+                      </h4>
+                      <p className="text-gray-700 font-medium text-sm">
+                        {contact.details}
+                      </p>
+                      <p className="text-gray-500 text-xs mt-1">
+                        {contact.subtext}
+                      </p>
                     </div>
                   </div>
                 </motion.div>
@@ -154,31 +175,22 @@ const CallToAction = () => {
               Start Your Project Today
             </motion.h3>
 
-            <motion.div
-              variants={itemVars}
-              className="mb-8 space-y-4"
-            >
+            <motion.div variants={itemVars} className="mb-8 space-y-4">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700 text-sm leading-relaxed">{benefit}</span>
+                  <span className="text-gray-700 text-sm leading-relaxed">
+                    {benefit}
+                  </span>
                 </div>
               ))}
             </motion.div>
 
-            <motion.div
-              variants={itemVars}
-              className="space-y-3"
-            >
-              <button className="w-full bg-primary text-white font-semibold py-4 px-6 rounded-lg hover:bg-primary-dark transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-primary/20">
+            <motion.div variants={itemVars} className="space-y-3">
+              <Link href={"/contact"} className="w-full bg-primary text-white font-semibold py-4 px-6 rounded-lg hover:bg-primary-dark transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-primary/20">
                 Schedule Free Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
-
-              <button className="w-full border-2 border-gray-200 text-gray-700 font-semibold py-4 px-6 rounded-lg hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300 flex items-center justify-center gap-2">
-                <Mail className="w-5 h-5" />
-                Send Us a Message
-              </button>
+              </Link>
             </motion.div>
 
             <motion.div
@@ -207,7 +219,7 @@ const CallToAction = () => {
               variants={itemVars}
               className="text-center text-gray-500 text-xs mt-6"
             >
-              🔒 No commitment required • Your information is secure
+              Contact us to arrange a confidential consultation. 
             </motion.p>
           </motion.div>
         </div>

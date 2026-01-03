@@ -7,9 +7,9 @@ import { Facebook, Twitter, Linkedin, Instagram, Users, ArrowRight } from 'lucid
 const teamMembers = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "Chief Technology Officer",
-    bio: "With over 15 years in software architecture, Sarah leads our technical vision and innovation strategy.",
+    name: "MD Niamul Islam Tanay",
+    role: "Founder & Chief Executive Officer",
+    bio: "Leads the overall direction and operations of PHEBEH, with responsibility for defining strategic priorities, guiding business growth, and ensuring the delivery of reliable and high-quality IT and digital solutions.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop",
     social: {
       facebook: "#",
@@ -20,9 +20,9 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "Lead Developer",
-    bio: "Full-stack expert specializing in scalable cloud solutions and modern web technologies.",
+    name: "Md. Tarikul Islam",
+    role: "Team Lead",
+    bio: "Provides overall technical leadership and project oversight. Responsible for planning and coordinating development activities, ensuring best practices, resolving technical challenges, and delivering projects on time with a strong focus on quality and reliability.",
     image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=500&fit=crop",
     social: {
       facebook: "#",
@@ -33,9 +33,9 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
-    role: "UX/UI Designer",
-    bio: "Creative designer passionate about crafting beautiful and intuitive user experiences.",
+    name: "Rashedul Alom",
+    role: "Senior Software Engineer",
+    bio: "Designs and maintains complex software systems, translating business requirements into scalable and secure solutions. Oversees code quality, mentors engineers, and resolves critical technical issues to ensure system performance and stability.",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop",
     social: {
       facebook: "#",
@@ -46,9 +46,9 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "David Thompson",
-    role: "Cybersecurity Specialist",
-    bio: "Expert in protecting digital assets with advanced security protocols and threat detection.",
+    name: "Azizur Rahman",
+    role: "Full Stack Software Engineer",
+    bio: "Delivers end-to-end application development across frontend and backend systems. Focuses on performance, security, API integration, and building reliable, user-friendly applications in close collaboration with the team.",
     image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=500&fit=crop",
     social: {
       facebook: "#",
@@ -59,9 +59,9 @@ const teamMembers = [
   },
   {
     id: 5,
-    name: "Lisa Anderson",
-    role: "Project Manager",
-    bio: "Agile methodology expert ensuring seamless project delivery and client satisfaction.",
+    name: "Jehan Rahman",
+    role: "Senior Database Engineer",
+    bio: "Leads database design, optimisation, and performance management. Ensures data security, compliance, and high availability while supporting critical production systems and mentoring database engineers.",
     image: "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=400&h=500&fit=crop",
     social: {
       facebook: "#",
@@ -72,9 +72,9 @@ const teamMembers = [
   },
   {
     id: 6,
-    name: "James Wilson",
-    role: "Database Administrator",
-    bio: "Specializes in database optimization, management, and ensuring data integrity across systems.",
+    name: "Muntasir Rahman",
+    role: "Database Engineer",
+    bio: "Supports database development and maintenance, including SQL queries, data processing, reporting, and performance tuning, ensuring data consistency and system reliability.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop",
     social: {
       facebook: "#",
@@ -82,7 +82,33 @@ const teamMembers = [
       linkedin: "#",
       instagram: "#"
     }
-  }
+  },
+  {
+    id: 7,
+    name: "Apple Mahmadud",
+    role: "UI & Frontend Designer",
+    bio: "Designs intuitive and visually refined user interfaces, transforming concepts into responsive frontend layouts while maintaining consistent design standards and strong user experience.",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop",
+    social: {
+      facebook: "#",
+      twitter: "#",
+      linkedin: "#",
+      instagram: "#"
+    }
+  },
+  {
+    id: 8,
+    name: "Mahatab Uddin",
+    role: "IT Engineer",
+    bio: "Manages and maintains IT infrastructure, including servers, networks, and systems. Ensures operational stability, security, and reliable day-to-day technical support.",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop",
+    social: {
+      facebook: "#",
+      twitter: "#",
+      linkedin: "#",
+      instagram: "#"
+    }
+  },
 ];
 
 export default function TeamPage() {
@@ -116,8 +142,7 @@ export default function TeamPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto"
           >
-            Our diverse team of experts brings together years of experience, creativity, and 
-            dedication to deliver exceptional IT solutions for your business.
+            PHEBEH is led by experienced professionals with strong technical expertise and a shared commitment to delivering reliable, secure, and high-quality digital solutions.
           </motion.p>
         </div>
       </section>

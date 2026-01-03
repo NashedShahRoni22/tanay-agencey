@@ -130,8 +130,8 @@ const Bottombar = () => {
               </motion.div>
 
               <p className="text-gray-300 leading-relaxed mb-6 text-sm">
-                We are passionate about empowering businesses through innovative
-                and reliable technology solutions.
+                PHEBEH provides IT and digital solutions designed to support
+                modern businesses.
               </p>
 
               {/* Social Links */}

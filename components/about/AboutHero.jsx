@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
+import Link from "next/link";
 
 export default function AboutHero() {
   return (
@@ -17,11 +18,11 @@ export default function AboutHero() {
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
           className="absolute top-20 right-1/4 w-32 h-32 border-4 border-white/20 rounded-3xl"
         />
-        
+
         <motion.div
           animate={{
             y: [0, 40, 0],
@@ -30,7 +31,7 @@ export default function AboutHero() {
           transition={{
             duration: 25,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
           className="absolute bottom-32 left-1/3 w-24 h-24 border-4 border-white/10 rounded-2xl"
         />
@@ -38,12 +39,12 @@ export default function AboutHero() {
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
+            opacity: [0.3, 0.5, 0.3],
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
           className="absolute top-1/4 right-1/3 w-64 h-64 bg-white/10 rounded-full blur-3xl"
         />
@@ -95,8 +96,9 @@ export default function AboutHero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            We deliver cutting-edge solutions that drive growth, enhance user experience, 
-            and elevate your brand to new heights. Let's build something extraordinary together.
+            We deliver cutting-edge solutions that drive growth, enhance user
+            experience, and elevate your brand to new heights. Let's build
+            something extraordinary together.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -106,28 +108,35 @@ export default function AboutHero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-wrap gap-4 justify-center"
           >
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)" }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white text-primary rounded-full font-semibold hover:bg-gray-50 transition-all duration-300 inline-flex items-center gap-2"
-            >
-              Get Started
-              <motion.span
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
+            <Link href={"/contact"}>
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300 inline-flex items-center gap-2"
               >
-                <ArrowRight size={20} />
-              </motion.span>
-            </motion.button>
+                Get Started
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  <ArrowRight size={20} />
+                </motion.span>
+              </motion.button>
+            </Link>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white/20 backdrop-blur-md text-white border-2 border-white/40 rounded-full font-semibold hover:bg-white/30 transition-all duration-300 inline-flex items-center gap-2"
-            >
-              <Play size={20} />
-              View Our Work
-            </motion.button>
+            <Link href={"/portfolio"}>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-white/20 backdrop-blur-md text-white border-2 border-white/40 rounded-lg font-semibold hover:bg-white/30 transition-all duration-300 inline-flex items-center gap-2"
+              >
+                <Play size={20} />
+                View Our Work
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </div>

@@ -7,29 +7,29 @@ export default function WorkProcess() {
   const steps = [
     {
       step: "01",
-      title: "Task Consultation",
-      description: "We start with a detailed consultation to understand your requirements, goals, and challenges.",
+      title: "Consultation",
+      description: "Understanding business priorities, risks, and technical requirements.",
       icon: MessageSquare,
       color: "from-blue-500 to-blue-600"
     },
     {
       step: "02",
-      title: "Planning & Proposal",
-      description: "Our experts create a comprehensive plan and proposal tailored to your specific needs.",
+      title: "Planning & Strategy",
+      description: "We design the most suitable technical solution for your needs.",
       icon: FileText,
       color: "from-purple-500 to-purple-600"
     },
     {
       step: "03",
-      title: "Task Execution",
-      description: "We implement the solution with precision, keeping you updated throughout the process.",
+      title: "Development & Testing",
+      description: "We build, test, and refine the solution with regular updates.",
       icon: Cog,
       color: "from-green-500 to-green-600"
     },
     {
       step: "04",
-      title: "Task Improvement",
-      description: "Continuous optimization and improvements to ensure long-term success and satisfaction.",
+      title: "Lunch & Support",
+      description: "We deploy the project and provide ongoing support if needed.",
       icon: TrendingUp,
       color: "from-orange-500 to-orange-600"
     }
