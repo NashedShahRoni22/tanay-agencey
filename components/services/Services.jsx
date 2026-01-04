@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from 'framer-motion';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import {
   Code,
   Smartphone,
@@ -11,23 +11,17 @@ import {
   Database,
   Globe,
   Cpu,
-  Headphones
-} from 'lucide-react';
+  Headphones,
+} from "lucide-react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const ServiceCard = ({ icon: Icon, title, description }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-xl hover:border-primary/20 transition-all duration-300 h-full"
-    >
+    <div className="bg-white rounded-2xl p-8 border-2 border-gray-100 text-center group hover:border-primary transition-all duration-300 h-full">
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
@@ -42,10 +36,8 @@ const ServiceCard = ({ icon: Icon, title, description }) => {
         {title}
       </h3>
 
-      <p className="text-gray-600 leading-relaxed">
-        {description}
-      </p>
-    </motion.div>
+      <p className="text-gray-600 leading-relaxed">{description}</p>
+    </div>
   );
 };
 
@@ -54,38 +46,33 @@ export default function Services() {
     {
       icon: Smartphone,
       title: "Mobile App Development",
-      description: "Custom Android and iOS applications designed for performance, usability, and scalability."
+      description:
+        "Custom Android and iOS applications designed for performance, usability, and scalability.",
     },
     {
       icon: Cloud,
       title: "Cloud Solutions",
-      description: "Secure and scalable cloud setups to help your business store, manage, and access data efficiently."
+      description:
+        "Secure and scalable cloud setups to help your business store, manage, and access data efficiently.",
     },
     {
       icon: Shield,
       title: "Cybersecurity",
-      description: "Technology and practices designed to safeguard systems, data, and user access across digital environments."
+      description:
+        "Technology and practices designed to safeguard systems, data, and user access across digital environments.",
     },
     {
       icon: Database,
       title: "Database Management",
-      description: "Structured database design, optimisation, and maintenance to ensure data integrity and system reliability."
+      description:
+        "Structured database design, optimisation, and maintenance to ensure data integrity and reliability.",
     },
-    // {
-    //   icon: Globe,
-    //   title: "Web Development",
-    //   description: "Modern, responsive websites and web applications built with cutting-edge technologies, SEO optimization, and best practices."
-    // },
     {
       icon: Cpu,
       title: "IT Support & Maintenance",
-      description: "Reliable technical support to keep your systems updated, secure, and running smoothly."
+      description:
+        "Reliable technical support to keep your systems updated, secure, and running smoothly.",
     },
-    // {
-    //   icon: Headphones,
-    //   title: "24/7 Technical Support",
-    //   description: "Round-the-clock technical assistance and monitoring services to ensure your systems run smoothly and efficiently at all times."
-    // }
   ];
 
   return (
@@ -121,23 +108,30 @@ export default function Services() {
           </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We deliver comprehensive IT solutions that empower your business to thrive in the digital age.
-            From custom software development to cloud infrastructure, we provide everything you need.
+            We deliver comprehensive IT solutions that empower your business to
+            thrive in the digital age. From custom software development to cloud
+            infrastructure, we provide everything you need.
           </p>
         </motion.div>
 
         {/* Services Carousel */}
-        <div className="relative px-4 sm:px-8 lg:px-12">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="relative px-4 sm:px-8 lg:px-12"
+        >
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}
             slidesPerView={1}
             navigation={{
-              nextEl: '.swiper-button-next-custom',
-              prevEl: '.swiper-button-prev-custom',
+              nextEl: ".swiper-button-next-custom",
+              prevEl: ".swiper-button-prev-custom",
             }}
             pagination={{
-              el: '.swiper-pagination-custom',
+              el: ".swiper-pagination-custom",
               clickable: true,
             }}
             autoplay={{
@@ -169,19 +163,39 @@ export default function Services() {
 
           {/* Custom Navigation Buttons - Outside the cards */}
           <button className="swiper-button-prev-custom absolute -left-2 sm:-left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 sm:p-3 hover:bg-primary hover:text-white transition-all duration-300 border border-gray-200 hover:border-primary cursor-pointer">
-            <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg
+              className="w-5 h-5 sm:w-6 sm:h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </button>
           <button className="swiper-button-next-custom absolute -right-2 sm:-right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 sm:p-3 hover:bg-primary hover:text-white transition-all duration-300 border border-gray-200 hover:border-primary cursor-pointer">
-            <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg
+              className="w-5 h-5 sm:w-6 sm:h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </button>
 
           {/* Custom Pagination with Primary Color */}
           <div className="swiper-pagination-custom flex justify-center mt-8 space-x-2"></div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

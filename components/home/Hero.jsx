@@ -269,7 +269,7 @@ export default function Hero() {
             variants={containerVars}
             initial="initial"
             animate="animate"
-            className="relative h-[600px] lg:h-[700px]"
+            className="relative hidden lg:block lg:h-[700px]"
           >
             {/* Central Glowing Core */}
             <motion.div

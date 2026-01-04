@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function Testimonial() {
   const testimonials = [
@@ -19,8 +19,9 @@ export default function Testimonial() {
       company: "TechStart Inc.",
       avatar: "https://i.pravatar.cc/150?img=1",
       rating: 5,
-      review: "PHEBEH transformed our digital presence completely. Their expertise in modern web technologies and attention to detail exceeded our expectations. The team's communication was excellent throughout the project.",
-      project: "E-commerce Platform"
+      review:
+        "PHEBEH transformed our digital presence completely. Their expertise in modern web technologies and attention to detail exceeded our expectations. The team's communication was excellent throughout the project.",
+      project: "E-commerce Platform",
     },
     {
       id: 2,
@@ -29,8 +30,9 @@ export default function Testimonial() {
       company: "InnovateLab",
       avatar: "https://i.pravatar.cc/150?img=2",
       rating: 5,
-      review: "Working with PHEBEH was a game-changer for our startup. They delivered a robust mobile application that our users love. Their agile approach and technical expertise helped us launch ahead of schedule.",
-      project: "Mobile App Development"
+      review:
+        "Working with PHEBEH was a game-changer for our startup. They delivered a robust mobile application that our users love. Their agile approach and technical expertise helped us launch ahead of schedule.",
+      project: "Mobile App Development",
     },
     {
       id: 3,
@@ -39,8 +41,9 @@ export default function Testimonial() {
       company: "GrowthCorp",
       avatar: "https://i.pravatar.cc/150?img=3",
       rating: 5,
-      review: "The cloud infrastructure solution provided by PHEBEH has significantly improved our operational efficiency. Their 24/7 support and proactive monitoring give us complete peace of mind.",
-      project: "Cloud Migration"
+      review:
+        "The cloud infrastructure solution provided by PHEBEH has significantly improved our operational efficiency. Their 24/7 support and proactive monitoring give us complete peace of mind.",
+      project: "Cloud Migration",
     },
     {
       id: 4,
@@ -49,8 +52,9 @@ export default function Testimonial() {
       company: "DataFlow Systems",
       avatar: "https://i.pravatar.cc/150?img=4",
       rating: 5,
-      review: "PHEBEH's cybersecurity expertise helped us strengthen our defenses against modern threats. Their comprehensive security audit and implementation were exactly what we needed to protect our business.",
-      project: "Security Audit & Implementation"
+      review:
+        "PHEBEH's cybersecurity expertise helped us strengthen our defenses against modern threats. Their comprehensive security audit and implementation were exactly what we needed to protect our business.",
+      project: "Security Audit & Implementation",
     },
     {
       id: 5,
@@ -59,8 +63,9 @@ export default function Testimonial() {
       company: "StreamLine Solutions",
       avatar: "https://i.pravatar.cc/150?img=5",
       rating: 5,
-      review: "The database optimization service from PHEBEH improved our application performance by 300%. Their technical knowledge and systematic approach to problem-solving is outstanding.",
-      project: "Database Optimization"
+      review:
+        "The database optimization service from PHEBEH improved our application performance by 300%. Their technical knowledge and systematic approach to problem-solving is outstanding.",
+      project: "Database Optimization",
     },
     {
       id: 6,
@@ -69,9 +74,10 @@ export default function Testimonial() {
       company: "NextGen Apps",
       avatar: "https://i.pravatar.cc/150?img=6",
       rating: 5,
-      review: "PHEBEH delivered a cutting-edge web application that perfectly met our complex requirements. Their innovative solutions and commitment to quality are truly impressive.",
-      project: "Web Application Development"
-    }
+      review:
+        "PHEBEH delivered a cutting-edge web application that perfectly met our complex requirements. Their innovative solutions and commitment to quality are truly impressive.",
+      project: "Web Application Development",
+    },
   ];
 
   const StarRating = ({ rating }) => {
@@ -95,8 +101,16 @@ export default function Testimonial() {
     <section className="py-20 bg-gray-50 overflow-hidden relative">
       {/* Subtle wave pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
-        <svg className="absolute bottom-0 left-0 w-full h-32" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,60 C300,100 600,20 900,60 C1050,80 1200,40 1200,60 L1200,120 L0,120 Z" fill="currentColor" className="text-primary"></path>
+        <svg
+          className="absolute bottom-0 left-0 w-full h-32"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,60 C300,100 600,20 900,60 C1050,80 1200,40 1200,60 L1200,120 L0,120 Z"
+            fill="currentColor"
+            className="text-primary"
+          ></path>
         </svg>
       </div>
 
@@ -124,23 +138,30 @@ export default function Testimonial() {
           </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Here's what our satisfied clients have to say
-            about working with PHEBEH and the results we've delivered.
+            Don't just take our word for it. Here's what our satisfied clients
+            have to say about working with PHEBEH and the results we've
+            delivered.
           </p>
         </motion.div>
 
         {/* Testimonials Carousel */}
-        <div className="relative px-4 sm:px-8 lg:px-12">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="relative px-4 sm:px-8 lg:px-12"
+        >
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={20}
             slidesPerView={1}
             navigation={{
-              nextEl: '.testimonial-button-next',
-              prevEl: '.testimonial-button-prev',
+              nextEl: ".testimonial-button-next",
+              prevEl: ".testimonial-button-prev",
             }}
             pagination={{
-              el: '.testimonial-pagination',
+              el: ".testimonial-pagination",
               clickable: true,
             }}
             autoplay={{
@@ -161,12 +182,8 @@ export default function Testimonial() {
           >
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-primary/20 transition-all duration-300 h-full"
+                <div
+                  className="bg-white rounded-3xl p-8 border border-gray-100 hover:border-primary transition-all duration-300 h-full"
                 >
                   {/* Quote Icon */}
                   <motion.div
@@ -209,12 +226,18 @@ export default function Testimonial() {
                       />
                     </motion.div>
                     <div>
-                      <h4 className="font-bold text-[#061039]">{testimonial.name}</h4>
-                      <p className="text-sm text-gray-600">{testimonial.position}</p>
-                      <p className="text-sm text-primary font-medium">{testimonial.company}</p>
+                      <h4 className="font-bold text-[#061039]">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        {testimonial.position}
+                      </p>
+                      <p className="text-sm text-primary font-medium">
+                        {testimonial.company}
+                      </p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -229,7 +252,7 @@ export default function Testimonial() {
 
           {/* Custom Pagination */}
           <div className="testimonial-pagination flex justify-center mt-8 space-x-2"></div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
