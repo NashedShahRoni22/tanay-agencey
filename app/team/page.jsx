@@ -205,28 +205,32 @@ export default function TeamPage() {
                   {/* Social Links */}
                   <div className="flex gap-3">
                     <a
-                      href={member.social.facebook}
+                      // href={member.social.facebook}
+                      href="/contact"
                       className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1"
                       aria-label="Facebook"
                     >
                       <Facebook size={16} />
                     </a>
                     <a
-                      href={member.social.twitter}
+                      // href={member.social.twitter}
+                      href="/contact"
                       className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1"
                       aria-label="Twitter"
                     >
                       <Twitter size={16} />
                     </a>
                     <a
-                      href={member.social.linkedin}
+                      // href={member.social.linkedin}
+                      href="/contact"
                       className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1"
                       aria-label="LinkedIn"
                     >
                       <Linkedin size={16} />
                     </a>
                     <a
-                      href={member.social.instagram}
+                      // href={member.social.instagram}
+                      href="/contact"
                       className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1"
                       aria-label="Instagram"
                     >

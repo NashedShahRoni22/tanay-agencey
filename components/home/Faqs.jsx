@@ -167,7 +167,7 @@ const Faqs = () => {
                   viewport={{ once: true }}
                   className="text-2xl font-bold text-primary mb-1"
                 >
-                  500+
+                  20+
                 </motion.div>
                 <div className="text-sm text-gray-600">Projects</div>
               </div>

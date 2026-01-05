@@ -199,7 +199,7 @@ const CallToAction = () => {
             >
               <div className="flex items-center justify-center gap-8 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-primary">500+</div>
+                  <div className="text-2xl font-bold text-primary">20+</div>
                   <div className="text-xs text-gray-500 mt-1">Projects</div>
                 </div>
                 <div className="h-8 w-px bg-gray-200" />

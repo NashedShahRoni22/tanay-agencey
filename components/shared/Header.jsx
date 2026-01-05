@@ -143,7 +143,7 @@ export default function Header() {
               </motion.a>
               <div className="flex items-center gap-2">
                 <MapPin size={18} />
-                <span>30 South Terrace, Australia</span>
+                <span>Sydney, Australia</span>
               </div>
               <motion.a
                 href="mailto:phebeh@gmail.com"

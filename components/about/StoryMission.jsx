@@ -147,7 +147,7 @@ export default function StoryMission() {
             >
               {[
                 { value: "5+", label: "Years" },
-                { value: "500+", label: "Projects" },
+                { value: "20+", label: "Projects" },
                 { value: "98%", label: "Success Rate" }
               ].map((stat, index) => (
                 <div key={index} className="text-center">

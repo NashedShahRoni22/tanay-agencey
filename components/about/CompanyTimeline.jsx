@@ -19,7 +19,7 @@ export default function CompanyTimeline() {
       description: "Landed our first enterprise client and expanded our service offerings to include cloud solutions and mobile development.",
       icon: Users,
       color: "from-green-500 to-green-600",
-      stats: "50+ Projects"
+      stats: "20+ Projects"
     },
     {
       year: "2021",

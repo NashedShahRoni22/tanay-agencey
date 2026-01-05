@@ -91,7 +91,7 @@ export default function StatusCounter() {
       icon: Users,
     },
     {
-      value: 500,
+      value: 20,
       suffix: "+",
       label: "Completed Projects",
       icon: CheckCircle,
