@@ -341,7 +341,7 @@ export default function Header() {
                 <div className="flex flex-col items-center gap-3 text-gray-500 text-sm mb-8">
                   <div className="flex items-center gap-2">
                     <MapPin size={16} className="text-primary" />
-                    <span>1234 Elm Street, San Francisco, CA</span>
+                    <span>30 South Terrace, Punchbowl-2196, NSW</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail size={16} className="text-primary" />
