@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Facebook, Twitter, Linkedin, Instagram, Users, ArrowRight } from 'lucide-react';
+import teamImage from "@/public/team.jpeg";
+import Image from "next/image";
 
 // Dummy team data
 const teamMembers = [
@@ -10,7 +12,7 @@ const teamMembers = [
     name: "MD Niamul Islam Tanay",
     role: "Founder & Chief Executive Officer",
     bio: "Leads the overall direction and operations of PHEBEH, with responsibility for defining strategic priorities, guiding business growth, and ensuring the delivery of reliable and high-quality IT and digital solutions.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop",
+    image: teamImage,
     social: {
       facebook: "#",
       twitter: "#",
@@ -23,7 +25,7 @@ const teamMembers = [
     name: "Md. Tarikul Islam",
     role: "Team Lead",
     bio: "Provides overall technical leadership and project oversight. Responsible for planning and coordinating development activities, ensuring best practices, resolving technical challenges, and delivering projects on time with a strong focus on quality and reliability.",
-    image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=500&fit=crop",
+    image: teamImage,
     social: {
       facebook: "#",
       twitter: "#",
@@ -36,7 +38,7 @@ const teamMembers = [
     name: "Rashedul Alom",
     role: "Senior Software Engineer",
     bio: "Designs and maintains complex software systems, translating business requirements into scalable and secure solutions. Oversees code quality, mentors engineers, and resolves critical technical issues to ensure system performance and stability.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop",
+    image: teamImage,
     social: {
       facebook: "#",
       twitter: "#",
@@ -49,7 +51,7 @@ const teamMembers = [
     name: "Azizur Rahman",
     role: "Full Stack Software Engineer",
     bio: "Delivers end-to-end application development across frontend and backend systems. Focuses on performance, security, API integration, and building reliable, user-friendly applications in close collaboration with the team.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=500&fit=crop",
+    image: teamImage,
     social: {
       facebook: "#",
       twitter: "#",
@@ -62,7 +64,7 @@ const teamMembers = [
     name: "Jehan Rahman",
     role: "Senior Database Engineer",
     bio: "Leads database design, optimisation, and performance management. Ensures data security, compliance, and high availability while supporting critical production systems and mentoring database engineers.",
-    image: "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=400&h=500&fit=crop",
+    image: teamImage,
     social: {
       facebook: "#",
       twitter: "#",
@@ -75,7 +77,7 @@ const teamMembers = [
     name: "Muntasir Rahman",
     role: "Database Engineer",
     bio: "Supports database development and maintenance, including SQL queries, data processing, reporting, and performance tuning, ensuring data consistency and system reliability.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop",
+    image: teamImage,
     social: {
       facebook: "#",
       twitter: "#",
@@ -88,7 +90,7 @@ const teamMembers = [
     name: "Apple Mahmadud",
     role: "UI & Frontend Designer",
     bio: "Designs intuitive and visually refined user interfaces, transforming concepts into responsive frontend layouts while maintaining consistent design standards and strong user experience.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop",
+    image: teamImage,
     social: {
       facebook: "#",
       twitter: "#",
@@ -101,7 +103,7 @@ const teamMembers = [
     name: "Mahatab Uddin",
     role: "IT Engineer",
     bio: "Manages and maintains IT infrastructure, including servers, networks, and systems. Ensures operational stability, security, and reliable day-to-day technical support.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop",
+    image: teamImage,
     social: {
       facebook: "#",
       twitter: "#",
@@ -182,12 +184,12 @@ export default function TeamPage() {
               >
                 {/* Image Container */}
                 <div className="relative h-80 overflow-hidden bg-gradient-to-br from-purple-100 to-blue-100">
-                  <img
+                  <Image
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
                 </div>
 
                 {/* Content */}

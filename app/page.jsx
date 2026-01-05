@@ -17,7 +17,7 @@ export default function page() {
       <CompanySection/>
       <WorkProcess/>
       <WhyChooseUs/>
-      <Testimonial/>
+      {/* <Testimonial/> */}
       <Faqs/>
       <CallToAction/>
     </section>

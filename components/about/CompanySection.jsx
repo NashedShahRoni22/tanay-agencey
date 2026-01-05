@@ -119,7 +119,7 @@ export default function CompanySection() {
                 viewport={{ once: true }}
                 className="text-4xl md:text-5xl font-bold text-[#061039] mb-6 leading-tight"
               >
-                We're a Trusted and Secure Web Agency
+                We're a Trusted and Secure Tech Sollutions Provider
               </motion.h2>
 
               <motion.p
@@ -198,12 +198,12 @@ export default function CompanySection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4, duration: 0.6 }}
               viewport={{ once: true }}
-              className="flex flex-wrap items-center gap-6 pt-4"
+              className="flex flex-wrap items-center pt-4"
             >
               {/* Active Reviews */}
               <div className="flex items-center gap-4">
                 {/* Avatar Stack */}
-                <div className="flex -space-x-3">
+                {/* <div className="flex -space-x-3">
                   <motion.div
                     whileHover={{ scale: 1.1, zIndex: 10 }}
                     className="w-12 h-12 rounded-full border-4 border-white bg-gradient-to-br from-primary to-primary-dark overflow-hidden"
@@ -238,7 +238,7 @@ export default function CompanySection() {
                 <div>
                   <div className="text-2xl font-bold text-[#061039]">1500+</div>
                   <div className="text-sm text-primary font-medium">Active Reviews</div>
-                </div>
+                </div> */}
               </div>
 
               {/* CTA Button */}

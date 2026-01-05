@@ -162,7 +162,8 @@ export default function Header() {
                 return (
                   <motion.a
                     key={idx}
-                    href={social.href}
+                    // href={social.href}
+                    href="/contact"
                     className="hover:text-white/70 transition-colors cursor-pointer"
                     whileHover={{ scale: 1.15, y: -2 }}
                     whileTap={{ scale: 0.95 }}
