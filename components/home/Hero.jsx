@@ -9,41 +9,18 @@ import {
   Cpu,
   Database,
   Code,
-  Server,
   Zap,
   Sparkles,
   Globe,
   Rocket,
+  Server,
 } from "lucide-react";
 import Link from "next/link";
 
 export default function Hero() {
-  const containerVars = {
-    initial: { opacity: 0 },
-    animate: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const textVars = {
-    initial: { y: 30, opacity: 0 },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: [0.43, 0.13, 0.23, 0.96],
-      },
-    },
-  };
-
   return (
-    <section className="pt-20 relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary via-[#7835ff] to-primary-dark">
-      {/* Ultra Creative Background Design */}
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary via-[#7c3aff] to-primary-dark">
+      {/* Dynamic Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Massive Animated Gradient Orbs */}
         <motion.div
@@ -74,7 +51,7 @@ export default function Hero() {
             ease: "easeInOut",
             delay: 2,
           }}
-          className="absolute -bottom-1/3 -left-1/4 w-[900px] h-[900px] bg-gradient-to-tr from-[#061039] to-indigo-400 rounded-full blur-3xl"
+          className="absolute -bottom-1/3 -left-1/4 w-[900px] h-[900px] bg-gradient-to-tr from-primary-dark to-indigo-400 rounded-full blur-3xl"
         />
 
         <motion.div
@@ -88,10 +65,10 @@ export default function Hero() {
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute top-1/3 left-1/3 w-[600px] h-[600px] bg-gradient-to-br from-pink-400 to-purple-600 rounded-full blur-3xl"
+          className="absolute top-1/3 left-1/3 w-[600px] h-[600px] bg-gradient-to-br from-purple-400 to-primary rounded-full blur-3xl"
         />
 
-        {/* Animated Grid Pattern with Glow */}
+        {/* Animated Grid Pattern */}
         <motion.div
           animate={{
             backgroundPosition: ["0% 0%", "100% 100%"],
@@ -123,7 +100,7 @@ export default function Hero() {
               ease: "easeInOut",
               delay: i * 0.5,
             }}
-            className={`absolute rounded-xl bg-white/10 backdrop-blur-sm border border-white/20`}
+            className="absolute rounded-xl bg-white/10 backdrop-blur-sm border border-white/20"
             style={{
               width: `${40 + Math.random() * 80}px`,
               height: `${40 + Math.random() * 80}px`,
@@ -155,77 +132,133 @@ export default function Hero() {
           />
         ))}
 
-        {/* Radial Gradient Spotlight */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(6,16,57,0.4)_100%)]" />
+        {/* Radial Gradient Overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(100,33,255,0.3)_100%)]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+        <div className="max-w-5xl mx-auto">
+          
+          {/* Floating Tech Icons */}
+          <div className="absolute inset-0 pointer-events-none">
+            {[
+              { Icon: Shield, pos: "top-10 left-[5%]", delay: 0 },
+              { Icon: Cloud, pos: "top-20 right-[8%]", delay: 0.5 },
+              { Icon: Database, pos: "bottom-32 left-[10%]", delay: 1 },
+              { Icon: Code, pos: "bottom-40 right-[12%]", delay: 1.5 },
+              { Icon: Zap, pos: "top-1/3 left-[2%]", delay: 2 },
+              { Icon: Sparkles, pos: "top-1/2 right-[5%]", delay: 2.5 },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ 
+                  opacity: [0.3, 0.6, 0.3],
+                  scale: [1, 1.1, 1],
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  delay: item.delay,
+                }}
+                className={`absolute ${item.pos} hidden xl:block`}
+              >
+                <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/20">
+                  <item.Icon className="w-6 h-6 text-white" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Main Content */}
           <motion.div
-            variants={containerVars}
-            initial="initial"
-            animate="animate"
-            className="text-left"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center space-y-8"
           >
-            {/* Epic Heading with Gradient Text */}
-            <motion.h1
-              variants={textVars}
-              className="text-3xl md:text-5xl font-bold text-white leading-[1.1] mb-8"
+            {/* Badge */}
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.3, type: "spring" }}
+              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 backdrop-blur-sm"
             >
-              <span className="block mb-2">Technology Solutions</span>
-              <span className="block">Built for </span>
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+              >
+                <Server className="w-4 h-4 text-white" />
+              </motion.div>
+              <span className="text-white text-sm font-medium">Enterprise IT Solutions</span>
+            </motion.div>
+
+            {/* Heading */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+              Technology Solutions Built for{" "}
               <motion.span
                 initial={{ backgroundPosition: "0% 50%" }}
                 animate={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}
                 transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-                className="inline-block bg-gradient-to-r from-white via-green-200 to-white bg-[length:200%_auto] bg-clip-text text-transparent"
-                style={{ WebkitTextFillColor: "transparent" }}
+                className="bg-gradient-to-r from-white via-green-200 to-white bg-[length:200%_auto] bg-clip-text text-transparent inline-block"
               >
                 Performance
               </motion.span>
-              <span className="block mt-2">
-                Security, and{" "}
-                <motion.span
-                  animate={{
-                    textShadow: [
-                      "0 0 20px rgba(255,255,255,0.5)",
-                      "0 0 40px rgba(255,255,255,0.8)",
-                      "0 0 20px rgba(255,255,255,0.5)",
-                    ],
-                  }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="text-green-300"
-                >
-                  Growth
-                </motion.span>
-              </span>
-            </motion.h1>
+              , Security & Growth
+            </h1>
 
-            {/* Description with Glass Effect */}
+            {/* Description */}
             <motion.div
-              variants={textVars}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 mb-10 shadow-xl"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="max-w-2xl mx-auto"
             >
-              <p className="lg:text-lg text-white leading-relaxed">
-                <strong>PHEBEH</strong> partners with forward-thinking
-                businesses to design, build, and manage digital systems that
-                deliver long-term value.
+              <p className="text-lg text-white/90 leading-relaxed">
+                <span className="font-semibold">PHEBEH</span> partners with forward-thinking businesses to design, build, and manage digital systems that deliver long-term value.
               </p>
             </motion.div>
 
-            {/* Premium CTA Buttons */}
-            <motion.div variants={textVars} className="flex flex-wrap gap-4">
+            {/* Feature Pills */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className="flex flex-wrap justify-center gap-3"
+            >
+              {[
+                { Icon: Lock, label: "Secure" },
+                { Icon: Zap, label: "Fast" },
+                { Icon: Shield, label: "Reliable" },
+              ].map((feature, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-lg px-4 py-2 backdrop-blur-sm cursor-default"
+                >
+                  <feature.Icon className="w-4 h-4 text-white" />
+                  <span className="text-sm font-medium text-white">
+                    {feature.label}
+                  </span>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
+              className="flex flex-wrap justify-center gap-4 pt-4"
+            >
               <Link href="/contact">
                 <motion.button
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 25px 50px rgba(255, 255, 255, 0.4)",
-                  }}
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative px-6 lg:px-10 py-2.5 lg:py-5 bg-white text-primary rounded-lg font-bold text-lg transition-all duration-300 inline-flex items-center gap-3 shadow-2xl overflow-hidden"
+                  className="group relative px-8 py-4 bg-white text-primary rounded-lg font-semibold text-base transition-all duration-300 inline-flex items-center gap-2 shadow-lg shadow-white/25 overflow-hidden hover:shadow-white/40"
                 >
                   <motion.div
                     animate={{
@@ -235,192 +268,54 @@ export default function Hero() {
                     transition={{ duration: 2, repeat: Infinity }}
                     className="absolute inset-0 bg-gradient-to-r from-green-200 to-transparent"
                   />
-                  <Rocket className="w-6 h-6 relative z-10" />
-                  <span className="relative z-10">Get a Free Consultation</span>
+                  <Rocket className="w-5 h-5 relative z-10" />
+                  <span className="relative z-10">Get Free Consultation</span>
                   <motion.span
                     animate={{ x: [0, 5, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                     className="relative z-10"
                   >
-                    <ArrowRight size={24} />
+                    <ArrowRight className="w-5 h-5" />
                   </motion.span>
                 </motion.button>
               </Link>
 
               <Link href="/services">
                 <motion.button
-                  whileHover={{
-                    scale: 1.05,
-                    backgroundColor: "rgba(255, 255, 255, 0.3)",
-                  }}
+                  whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.2)" }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-6 lg:px-10 py-2.5 lg:py-5 bg-white/20 backdrop-blur-xl text-white border-2 border-white/50 rounded-lg font-bold text-lg hover:border-white transition-all duration-300 inline-flex items-center gap-3 shadow-xl"
+                  className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-lg font-semibold text-base hover:border-white/50 transition-all duration-300 inline-flex items-center gap-2"
                 >
-                  <Globe className="w-6 h-6" />
+                  <Globe className="w-5 h-5" />
                   View Our Services
-                  <ArrowRight size={24} />
+                  <ArrowRight className="w-5 h-5" />
                 </motion.button>
               </Link>
             </motion.div>
           </motion.div>
-
-          {/* Right - 3D Icon Sphere System */}
-          <motion.div
-            variants={containerVars}
-            initial="initial"
-            animate="animate"
-            className="relative hidden lg:block lg:h-[700px]"
-          >
-            {/* Central Glowing Core */}
-            <motion.div
-              animate={{
-                scale: [1, 1.1, 1],
-                boxShadow: [
-                  "0 0 60px rgba(255,255,255,0.3)",
-                  "0 0 100px rgba(255,255,255,0.5)",
-                  "0 0 60px rgba(255,255,255,0.3)",
-                ],
-              }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-2xl rounded-full border-4 border-white/40 shadow-2xl flex items-center justify-center"
-            >
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              >
-                <Server className="w-32 h-32 text-white drop-shadow-2xl" />
-              </motion.div>
-
-              {/* Orbiting Rings */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 border-2 border-white/30 rounded-full"
-                style={{ borderStyle: "dashed" }}
-              />
-            </motion.div>
-
-            {/* Orbiting Service Icons */}
-            {[
-              {
-                Icon: Shield,
-                color: "from-blue-400 to-blue-600",
-                orbit: 220,
-                speed: 12,
-              },
-              {
-                Icon: Cloud,
-                color: "from-purple-400 to-purple-600",
-                orbit: 220,
-                speed: 14,
-              },
-              {
-                Icon: Lock,
-                color: "from-green-400 to-green-600",
-                orbit: 220,
-                speed: 16,
-              },
-              {
-                Icon: Cpu,
-                color: "from-orange-400 to-orange-600",
-                orbit: 220,
-                speed: 18,
-              },
-              {
-                Icon: Database,
-                color: "from-pink-400 to-pink-600",
-                orbit: 280,
-                speed: 20,
-              },
-              {
-                Icon: Code,
-                color: "from-green-400 to-green-600",
-                orbit: 280,
-                speed: 22,
-              },
-              {
-                Icon: Zap,
-                color: "from-indigo-400 to-indigo-600",
-                orbit: 280,
-                speed: 24,
-              },
-              {
-                Icon: Sparkles,
-                color: "from-red-400 to-red-600",
-                orbit: 280,
-                speed: 26,
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                animate={{ rotate: 360 }}
-                transition={{
-                  duration: item.speed,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-                className="absolute top-1/2 left-1/2"
-                style={{
-                  width: item.orbit * 2,
-                  height: item.orbit * 2,
-                  marginLeft: -item.orbit,
-                  marginTop: -item.orbit,
-                }}
-              >
-                <motion.div
-                  whileHover={{
-                    scale: 1.4,
-                    rotate: 720,
-                    boxShadow: "0 20px 60px rgba(255,255,255,0.5)",
-                  }}
-                  className={`absolute top-0 left-1/2 -translate-x-1/2 w-24 h-24 bg-gradient-to-br ${item.color} rounded-3xl shadow-2xl flex items-center justify-center backdrop-blur-sm border-2 border-white/40 cursor-pointer`}
-                >
-                  <item.Icon className="w-12 h-12 text-white" />
-                </motion.div>
-              </motion.div>
-            ))}
-
-            {/* Outer Glow Rings */}
-            {[400, 500, 600].map((size, i) => (
-              <motion.div
-                key={size}
-                animate={{
-                  rotate: i % 2 === 0 ? 360 : -360,
-                  opacity: [0.1, 0.3, 0.1],
-                }}
-                transition={{
-                  duration: 15 + i * 5,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white/10 rounded-full"
-                style={{ width: size, height: size }}
-              />
-            ))}
-          </motion.div>
         </div>
       </div>
 
-      {/* Premium Scroll Indicator */}
+      {/* Scroll Indicator */}
       <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 hidden lg:flex flex-col items-center gap-2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:block"
       >
-        <span className="text-white/70 text-sm font-medium">
-          Scroll to Explore
-        </span>
         <motion.div
-          animate={{ y: [0, 12, 0] }}
+          animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-8 h-12 border-2 border-white/50 rounded-full flex justify-center pt-2"
+          className="flex flex-col items-center gap-2 cursor-pointer group"
         >
-          <motion.div
-            animate={{ y: [0, 16, 0], opacity: [1, 0, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-2 h-2 bg-white rounded-full"
-          />
+          <span className="text-white/60 text-xs font-medium group-hover:text-white transition-colors">Explore More</span>
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2 group-hover:border-white/50 transition-colors">
+            <motion.div
+              animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="w-1.5 h-1.5 bg-white rounded-full"
+            />
+          </div>
         </motion.div>
       </motion.div>
     </section>
